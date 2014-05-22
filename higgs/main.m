@@ -1,7 +1,7 @@
 cd "models";
 cd "logreg";
 
-ls;
+logisticRegression
 
 cd ..;
 cd ..;
