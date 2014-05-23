@@ -1,5 +1,5 @@
 function predictions = predict(Xtest, theta)
 
-predictions = sigmoid(Xtest * theta) > 0.5;
+predictions = sigmoid(Xtest * theta);
 
 end
