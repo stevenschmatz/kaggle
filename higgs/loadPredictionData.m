@@ -1,4 +1,4 @@
-cd ../../data/higgs;
+cd ../../../data/kaggle/higgs;
 
 M = csvread('test.csv', 1, 0);
 EventIDs = M(:, 1);

@@ -1,6 +1,8 @@
 function polyFeatures = createPolynomialFeatures(X)
 
-[m n] = size(X);
+A = X(:, 2:end);
+
+[m n] = size(A);
 
 polyFeatures = zeros(m, n*(n+1)/2);
 
@@ -10,9 +12,13 @@ for i = 1:n
 
 for j = i:n
 
-polyFeatures(:, counter) = X(:, i).*X(:, j);
+polyFeatures(:, counter) = A(:, i).*A(:, j);
 counter += 1;
 
 end
+
+end
+
+polyFeatures = [ones(m, 1) polyFeatures];
 
 end

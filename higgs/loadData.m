@@ -1,9 +1,8 @@
-cd ../../data/higgs;
+cd ../../data/kaggle/higgs;
 
 M = csvread('training.csv',1,1);
 X = M(:, 1:30);
 X = [ones(size(X, 1), 1), X];
-clear M;
 
 DER_mass_MMC = M(:, 1);				% Estimated mass of Higgs boson candidate, MeV/c^2
 DER_mass_transverse_met_lep = M(:, 2);		% Transverse mass between the missing transverse energy and the lepton
@@ -36,9 +35,11 @@ PRI_jet_subleading_eta = M(:, 28);		% The pseudorapidity of the subleading jet
 PRI_jet_subleading_phi = M(:, 29);		% The azimuth angle of the subleading jet
 PRI_jet_all_pt = M(:, 30);			% The scalar sum of the transverse momentum of all the jets of the events
 
+clear M;
+
 y = csvread('labels.csv');			% The event label in 1's and 0's. NOT IN ORIGINAL FILE, DONE IN EXCEL.
 y = y(3:end)';
 
-cd ../../kaggle/higgs;
+cd ../../../kaggle/higgs;
 
 
