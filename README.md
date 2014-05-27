@@ -1,1 +1,1 @@
-This is the repository for code for my Kaggle projects.
+This is the repository for all of my current Kaggle projects.
